@@ -13,6 +13,12 @@ const routes: RouteRecordRaw[] = [
                 path: '/',
                 name: 'Home',
                 component: Home
+            },
+            {
+                path: '/chooseIcon',
+                name: 'ChooseIcon',
+                // @ts-ignore
+                component: () => import('../views/chooseIcon/index.vue')
             }
         ]
     }

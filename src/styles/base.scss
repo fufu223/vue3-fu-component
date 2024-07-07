@@ -1,0 +1,44 @@
+// 基础样式
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+.el-container,
+.el-menu,
+#app {
+  height: 100%;
+}
+
+svg {
+  width: 1em;
+  height: 1em;
+}
+
+/* 整体滚动条样式 */
+::-webkit-scrollbar {
+  width: 12px; /* 滚动条宽度 */
+}
+
+/* 滚动条轨道样式 */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* 轨道背景色 */
+}
+
+/* 滑块样式 */
+::-webkit-scrollbar-thumb {
+  background: #888; /* 滑块背景色 */
+}
+
+/* 滑块悬停时的样式 */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* 悬停时滑块背景色 */
+}
+
+/* 滚动条两端的按钮 */
+::-webkit-scrollbar-button {
+  display: none; /* 隐藏按钮 */
+}
