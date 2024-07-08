@@ -64,3 +64,9 @@ let visible = ref<boolean>(false)
 </script>
 ```
 这里的`visible`属性是父组件通过`v-model`绑定的，所以子组件通过`defineProps`接收，但是`visible`属性是只读的，所以无法修改，所以需要通过响应式变量`dialogVisible`进行数据更新，通过watch监听`props.visible`的变化，将`dialogVisible`的值更新为`props.visible`的值，这样`dialogVisible`的值就可以改变，从而实现父子组件通信 **（上述代码并不包括数据更新的实现，这里只是作为案例展示思路）**
+
+### 省市区联动选择器
+主要实现思路是利用watch去监听省、市的变化，从而去更新下一级的数据
+大概实现过程：
+1. 准备省市区数据--》github搜索即可
+2. 表单三级联动，利用watch监听上一级变化更新数据和可操作状态，**上一级没选之前，下一级必须为空且不可操作**
