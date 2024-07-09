@@ -15,7 +15,8 @@
       <el-icon>
         <fu-icon-menu/>
       </el-icon>
-      <span>省市区选择器</span>
+<!--      <span>省市区选择器</span>-->
+      <router-link to="/chooseArea">省市区选择器</router-link>
     </el-menu-item>
     <el-menu-item index="2">
       <el-icon>
