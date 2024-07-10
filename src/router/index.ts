@@ -10,22 +10,28 @@ const routes: RouteRecordRaw[] = [
         component: Container,
         children: [
             {
-                path: '/',
+                path: '',
                 name: 'Home',
                 component: Home
             },
             {
-                path: '/chooseIcon',
+                path: 'chooseIcon',
                 name: 'ChooseIcon',
                 // @ts-ignore
                 component: () => import('../views/chooseIcon/index.vue')
             },
             {
-                path: '/chooseArea',
+                path: 'chooseArea',
                 name: 'ChoooseArea',
                 // @ts-ignore
                 component: () => import('../views/chooseArea/index.vue')
-            }
+            },
+            {
+                path: 'trend',
+                name: 'Trend',
+                // @ts-ignore
+                component: () => import('../views/trend/index.vue')
+            },
         ]
     }
 ]

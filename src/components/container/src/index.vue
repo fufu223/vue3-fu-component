@@ -28,5 +28,8 @@ const isCollapse = ref(false)
 .el-header {
   padding: 0;
 }
+.el-main {
+  background-color: #f5f5f5;
+}
 
 </style>

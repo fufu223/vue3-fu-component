@@ -1,8 +1,8 @@
 <template>
   <div class="header">
     <span @click="toggle" style="cursor: pointer">
-      <el-icon-expand v-if="collapse"></el-icon-expand>
-      <el-icon-fold v-else></el-icon-fold>
+      <fu-icon-expand v-if="collapse"></fu-icon-expand>
+      <fu-icon-fold v-else></fu-icon-fold>
     </span>
   </div>
 </template>
