@@ -9,4 +9,7 @@
 <style lang="scss">
 @import "@/styles/ui";
 @import "@/styles/base";
+.el-popover {
+  padding: 0 !important;
+}
 </style>
