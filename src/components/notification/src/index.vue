@@ -2,11 +2,9 @@
   <div class="notification-container">
     <el-popover
         placement="bottom"
-        :width="300"
+        :width="350"
         trigger="click">
-      <template #default>
-        <slot></slot>
-      </template>
+
       <template #reference>
           <el-badge style="cursor: pointer" v-bind="props">
             <el-icon :size="size">
@@ -14,6 +12,11 @@
             </el-icon>
           </el-badge>
       </template>
+
+      <template #default>
+        <slot></slot>
+      </template>
+
     </el-popover>
   </div>
 </template>

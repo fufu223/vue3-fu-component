@@ -1,52 +1,38 @@
 <template>
-<div>
-  <el-dropdown>
-    <span class="el-dropdown-link">
-      Dropdown List
-      <el-icon class="el-icon--right">
-        <fu-icon-arrow-down />
-      </el-icon>
-    </span>
-    <template #dropdown>
-      <el-dropdown-menu>
-        <el-dropdown-item>Action 1</el-dropdown-item>
-        <el-dropdown-item>Action 2</el-dropdown-item>
-        <el-dropdown-item>Action 3</el-dropdown-item>
-        <el-dropdown-item disabled>Action 4</el-dropdown-item>
-        <el-dropdown-item divided>Action 5</el-dropdown-item>
-      </el-dropdown-menu>
-    </template>
-  </el-dropdown>
-</div>
+  <query-bar :is-advanced="true" :is-show="isShow" :row-column="rowColumn"></query-bar>
+  <el-button @click="isShow = !isShow">点击显示</el-button>
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import {ref} from "vue"
+import queryBar from "@/components/test/src/index.vue"
 
-const item = {
-  code: "1",
-  title: "测试",
-  children: [
+const isShow = ref(false)
+  const rowColumn = {
+  1: [
     {
-      code: "1",
-      title: "测试1",
+      label: "姓名",
+      type: "el-input"
     },
     {
-      code: "2",
-      title: "测试2",
+      label: "年龄",
+      type: "el-input"
+    }
+  ],
+  2: [
+    {
+      label: "性别",
+      type: "el-select"
+    },
+    {
+      label: "地址",
+      type: "el-input"
     }
   ]
 }
 
-
-
 </script>
 
 <style scoped>
-.example-showcase, .el-dropdown-link {
-  cursor: pointer;
-  color: blue;
-  display: flex;
-  align-items: center;
-}
+
 </style>

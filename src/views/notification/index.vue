@@ -5,7 +5,7 @@
 <!--  <fu-notification icon="fu-icon-bell-filled" :is-dot="false" :value="100" :max="99"></fu-notification>-->
       <fu-notification :value="50">
         <template v-slot:default>
-          <fu-list :list="list" :actions="actions"></fu-list>
+          <fu-list @clickItem="clickItem"  @clickAction="alickAction" :list="list" :actions="actions"></fu-list>
         </template>
       </fu-notification>
 </template>
@@ -14,8 +14,13 @@
 import FuNotification from "@/components/notification/src/index.vue"
 import FuList from "@/components/list/src/index.vue"
 import { list, actions } from "@/views/notification/data";
+const clickItem = (item: any, index: number) => {
+  console.log(item, index);
+}
 
-console.log(list,actions)
+const alickAction = (action: any, index: number) => {
+  console.log(action, index);
+}
 </script>
 
 <style scoped lang="scss">
