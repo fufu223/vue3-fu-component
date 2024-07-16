@@ -9,7 +9,7 @@
             </div>
             <div class="item-content">
               <div class="title">
-                <div>{{ item.title }}</div>
+                <div style="font-family: '黑体';font-size: 16px">{{ item.title }}</div>
                 <el-tag v-if="item.tag" :type="item.tagType">{{ item.tag }}</el-tag>
               </div>
               <div v-if="item.desc">{{ item.desc }}</div>

@@ -4,8 +4,8 @@
       <el-form class="flex-1">
         <el-row v-for="cloumn in rowColumn" :key="cloumn">
           <el-col v-for="item in cloumn" :span="24 / groupSize">
-            <el-form-item :label="item.label">
-              <component :is="item.type"/>
+            <el-form-item :label="item.label" style="margin-left: 15px">
+              <component :is="item.type" />
             </el-form-item>
           </el-col>
         </el-row>
@@ -54,7 +54,7 @@ const props = defineProps({
   },
   groupSize: {
     type: Number,
-    default: 3
+    default: 4
   }
 })
 const onSearch = () => {
