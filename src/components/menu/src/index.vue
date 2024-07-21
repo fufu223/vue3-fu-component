@@ -1,6 +1,7 @@
 <template>
   <el-menu v-bind="$attrs" :default-active="defaultActive" :router="router">
     <template v-for="(item, index) in data" :key="index">
+      <!-- 一级菜单 -->
       <el-menu-item
       v-if="!item.children || !item.children.length"
       :index="item.index"
@@ -9,6 +10,7 @@
         <span>{{item.name}}</span>
       </el-menu-item>
 
+      <!-- 二级菜单 -->
       <el-sub-menu v-if="item.children && item.children.length" :index="item.index">
         <template #title>
           <component v-if="item.icon" :is="`fu-icon-${toLine(item.icon)}`"></component>
@@ -43,7 +45,7 @@ let props = defineProps({
   // 是否是路由模式
   router: {
     type: Boolean,
-    default: true
+    default: false
   }
 })
 
