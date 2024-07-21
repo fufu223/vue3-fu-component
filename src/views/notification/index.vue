@@ -8,6 +8,7 @@
           <fu-list @clickItem="clickItem"  @clickAction="alickAction" :list="list" :actions="actions"></fu-list>
         </template>
       </fu-notification>
+      <fu-notification :value="100" :max="99"></fu-notification>
 </template>
 
 <script setup lang="ts">

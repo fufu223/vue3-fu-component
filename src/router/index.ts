@@ -35,7 +35,20 @@ const routes: RouteRecordRaw[] = [
             {
                 path: 'notification',
                 name: 'Notification',
+                // @ts-ignore
                 component: () => import('../views/notification/index.vue')
+            },
+            {
+                path: 'progress',
+                name: 'Progress',
+                // @ts-ignore
+                component: () => import('../views/progress/index.vue')
+            },
+            {
+                path: 'menu',
+                name: 'Menu',
+                // @ts-ignore
+                component: () => import('../views/menu/index.vue')
             }
         ]
     }

@@ -44,6 +44,22 @@
         <router-link to="/notification">通知菜单</router-link>
       </span>
     </el-menu-item>
+    <el-menu-item index="2">
+      <el-icon>
+        <fu-icon-bell />
+      </el-icon>
+      <span>
+        <router-link to="/progress">自定义业务组件</router-link>
+      </span>
+    </el-menu-item>
+    <el-menu-item index="2">
+      <el-icon>
+        <fu-icon-bell />
+      </el-icon>
+      <span>
+        <router-link to="/menu">菜单</router-link>
+      </span>
+    </el-menu-item>
   </el-menu>
 </template>
 
