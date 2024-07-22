@@ -26,6 +26,7 @@ export default defineComponent({
             return data.map((item: MenuItem) => {
                 // 处理菜单图标
                 item.jsxIcon = `fu-icon-${toLine(item.icon)}`
+                console.log(item.jsxIcon)
                 // 处理el-sub-menu的插槽
                 let slots = {
                     title: () => {
