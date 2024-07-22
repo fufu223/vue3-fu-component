@@ -1,5 +1,10 @@
 <template>
-  <el-menu v-bind="$attrs" :default-active="defaultActive" :router="router">
+  <el-menu
+      class="el-menu-vertical-demo"
+      v-bind="$attrs"
+      :default-active="defaultActive"
+      :router="router"
+  >
     <template v-for="(item, index) in data" :key="index">
       <!-- 一级菜单 -->
       <el-menu-item
@@ -55,5 +60,14 @@ console.log(props.data)
 <style scoped lang="scss">
 svg {
   margin-right: 4px;
+}
+/*应用于类名为.el-menu-vertical-demo且不包含类名为.el-menu--collapse的元素*/
+.el-menu-vertical-demo:not(.el-menu--collapse) {
+  width: 200px;
+
+  a {
+    text-decoration: none;
+    color: #409eff;
+  }
 }
 </style>
