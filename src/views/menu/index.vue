@@ -4,10 +4,36 @@
       <span>二级菜单</span>
       <fu-menu :data="data1"  active-text-color="red" default-active="1" ></fu-menu>
     </div>
+    <div class="left">
+      <span>测试键名映射</span>
+      <fu-menu
+          :data="testData1"
+          name="label"
+          index="id"
+          icon="svg"
+          children="sons"
+          active-text-color="red"
+          default-active="1" ></fu-menu>
+    </div>
+    <div class="right">
+      <span>测试多级菜单键名映射</span>
+      <fu-infinite-menu
+          :data="testData2"
+          name="label"
+          index="id"
+          icon="svg"
+          children="sons"
+          active-text-color="blue"
+          default-active="1"></fu-infinite-menu>
+    </div>
     <div class="right">
       <span>多级菜单(递归)</span>
-      <fu-infinite-menu :data="data2" active-text-color="blue" default-active="1"></fu-infinite-menu>
+      <fu-infinite-menu
+          :data="data2"
+          active-text-color="blue"
+          default-active="1"></fu-infinite-menu>
     </div>
+
     <div class="description">
       <div style="text-align: center"><span>归纳</span></div>
       <div class="context">
@@ -52,37 +78,106 @@ let data2 = [
   {
     name: '导航1',
     index: '1',
-    icon: 'document'
+    icon: 'Document'
   },
   {
     name: '导航2',
     index: '2',
-    icon: 'document'
+    icon: 'Document'
   },
   {
     name: '导航3',
     index: '3',
-    icon: 'document',
+    icon: 'Document',
     children: [
       {
         name: '导航3-1',
         index: '3-1',
-        icon: 'document',
+        icon: 'Document',
         children: [
           {
             name: '导航3-1-1',
             index: '3-1-1',
-            icon: 'document',
+            icon: 'Document',
             children: [
               {
                 name: '导航3-1-1-1',
                 index: '3-1-1-1',
-                icon: 'document',
+                icon: 'Document',
                 children: [
                   {
                     name: '导航3-1-1-1-1',
                     index: '3-1-1-1-1',
-                    icon: 'document'
+                    icon: 'Document'
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
+let testData1 = [
+  {
+    label: '导航1',
+    id: '1',
+    svg: 'document'
+  },
+  {
+    label: '导航2',
+    id: '2',
+    svg: 'document'
+  },
+  {
+    label: '导航3',
+    id: '3',
+    svg: 'document',
+    sons: [
+      {
+        label: '导航3-1',
+        id: '3-1',
+        svg: 'document'
+      }
+    ]
+  }
+]
+let testData2 = [
+  {
+    label: '导航1',
+    id: '1',
+    svg: 'Document'
+  },
+  {
+    label: '导航2',
+    id: '2',
+    svg: 'Document'
+  },
+  {
+    label: '导航3',
+    id: '3',
+    svg: 'Document',
+    sons: [
+      {
+        label: '导航3-1',
+        id: '3-1',
+        svg: 'Document',
+        sons: [
+          {
+            label: '导航3-1-1',
+            id: '3-1-1',
+            svg: 'Document',
+            sons: [
+              {
+                label: '导航3-1-1-1',
+                id: '3-1-1-1',
+                svg: 'Document',
+                sons: [
+                  {
+                    label: '导航3-1-1-1-1',
+                    id: '3-1-1-1-1',
+                    svg: 'Document'
                   }
                 ]
               }
