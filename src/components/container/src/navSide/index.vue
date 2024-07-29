@@ -125,13 +125,4 @@ let data = [
 
 
 <style lang="scss" scoped>
-/*应用于类名为.el-menu-vertical-demo且不包含类名为.el-menu--collapse的元素*/
-.el-menu-vertical-demo:not(.el-menu--collapse) {
-  width: 200px;
-
-  a {
-    text-decoration: none;
-    color: #409eff;
-  }
-}
 </style>

@@ -5,25 +5,25 @@
       :default-active="defaultActive"
       :router="router"
   >
-    <template v-for="(item, index) in data" :key="index">
+    <template v-for="(item, i) in data" :key="i">
       <!-- 一级菜单 -->
       <el-menu-item
-      v-if="!item.children || !item.children.length"
-      :index="item.index"
+      v-if="!item[children] || !item[children].length"
+      :index="item[index]"
       >
-        <component v-if="item.icon" :is="`fu-icon-${toLine(item.icon)}`"></component>
-        <span>{{item.name}}</span>
+        <component v-if="item[icon]" :is="`fu-icon-${toLine(item[icon])}`"></component>
+        <span>{{item[name]}}</span>
       </el-menu-item>
 
       <!-- 二级菜单 -->
-      <el-sub-menu v-if="item.children && item.children.length" :index="item.index">
+      <el-sub-menu v-if="item[children] && item[children].length" :index="item[props.index]">
         <template #title>
-          <component v-if="item.icon" :is="`fu-icon-${toLine(item.icon)}`"></component>
-          <span>{{item.name}}</span>
+          <component v-if="item[icon]" :is="`fu-icon-${toLine(item[icon])}`"></component>
+          <span>{{item[name]}}</span>
         </template>
-        <el-menu-item v-for="(subItem, subIndex) in item.children" :index="subItem.index" :key="subIndex">
-          <component v-if="subItem.icon" :is="`fu-icon-${toLine(subItem.icon)}`"></component>
-          <span>{{subItem.name}}</span>
+        <el-menu-item v-for="(subItem, subIndex) in item[children]" :index="subItem[index]" :key="subIndex">
+          <component v-if="subItem[icon]" :is="`fu-icon-${toLine(subItem[icon])}`"></component>
+          <span>{{subItem[name]}}</span>
         </el-menu-item>
       </el-sub-menu>
 
@@ -51,6 +51,26 @@ let props = defineProps({
   router: {
     type: Boolean,
     default: false
+  },
+  // 键名
+  name : {
+    type: String,
+    default: 'name'
+  },
+  // 菜单标识的键名
+  index : {
+    type: String,
+    default: 'index'
+  },
+  // 菜单图标的键名
+  icon : {
+    type: String,
+    default: 'icon'
+  },
+  // 菜单子菜单的键名
+  children : {
+    type: String,
+    default: 'children'
   }
 })
 
