@@ -80,6 +80,8 @@ console.log(props.data)
 <style scoped lang="scss">
 svg {
   margin-right: 4px;
+  width: 1em;
+  height: 1em;
 }
 /*应用于类名为.el-menu-vertical-demo且不包含类名为.el-menu--collapse的元素*/
 .el-menu-vertical-demo:not(.el-menu--collapse) {

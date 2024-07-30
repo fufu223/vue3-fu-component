@@ -118,7 +118,11 @@ let data = [
     icon: 'menu',
     index: '/menu'
   },
-  {}
+  {
+    name: '进度条',
+    icon: 'progress',
+    index: '/progress'
+  }
 ]
 
 </script>

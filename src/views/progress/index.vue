@@ -60,6 +60,15 @@
       </fs-progress>
     </div>
   </div>
+  <div class="progress-box">
+    <div class="title">
+      样式6
+    </div>
+    <div class="progress-bar">
+      <fs-progress :percentage="50"  :indeterminate="false" :striped="false" :stroke-width="10" type="circle">
+      </fs-progress>
+    </div>
+  </div>
   <el-button @click="progressProp.percentage=0" type="primary">reset</el-button>
 </template>
 
@@ -130,7 +139,7 @@ setInterval(() => {
 <style scoped lang="scss">
 .progress-box {
   display: flex;
-  height: 50px;
+  height: 80px;
   padding: 10px 5px 0 5px;
   justify-content: center;
   align-items: center;

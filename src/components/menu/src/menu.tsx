@@ -54,7 +54,7 @@ export default defineComponent({
                 let slots = {
                     title: () => {
                         return <>
-                            <item.jsxIcon />
+                            <item.jsxIcon style={"width:1em;height:1em;"}/>
                             <span>{item[props.name]}</span>
                         </>
                     }
@@ -70,7 +70,7 @@ export default defineComponent({
                 // 正常渲染普通菜单
                 return (
                     <el-menu-item index={item[props.index]}>
-                        <item.jsxIcon/>
+                        <item.jsxIcon style={"width:1em;height:1em;"}/>
                         <span>{item[props.name]}</span>
                     </el-menu-item>
                 )

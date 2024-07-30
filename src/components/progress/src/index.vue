@@ -10,6 +10,7 @@
         :color="color"
         :status="status"
         :text-inside="textInside"
+        v-bind="$attrs"
     >
       <slot name="default"></slot>
     </el-progress>
