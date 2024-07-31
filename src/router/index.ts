@@ -49,6 +49,12 @@ const routes: RouteRecordRaw[] = [
                 name: 'Menu',
                 // @ts-ignore
                 component: () => import('../views/menu/index.vue')
+            },
+            {
+                path: 'chooseTime',
+                name: 'ChooseTime',
+                // @ts-ignore
+                component: () => import('../views/chooseTime/index.vue')
             }
         ]
     }

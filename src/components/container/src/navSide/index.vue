@@ -101,7 +101,7 @@ let data = [
   {
     name: '时间选择器',
     icon: 'timer',
-    index: '/timer'
+    index: '/chooseTime'
   },
   {
     name: '通知菜单',
@@ -120,7 +120,7 @@ let data = [
   },
   {
     name: '进度条',
-    icon: 'progress',
+    icon: 'right',
     index: '/progress'
   }
 ]
