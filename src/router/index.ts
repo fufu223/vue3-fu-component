@@ -49,6 +49,17 @@ const routes: RouteRecordRaw[] = [
                 name: 'Menu',
                 // @ts-ignore
                 component: () => import('../views/menu/index.vue')
+            },
+            {
+                path: 'test',
+                name: 'Test',
+                component: () => import('../views/test/index.vue')
+            },
+            {
+                path: 'websocket',
+                name: 'websocket',
+                // @ts-ignore
+                component: () => import('../views/websocket/index.vue')
             }
         ]
     }

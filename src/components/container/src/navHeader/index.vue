@@ -4,6 +4,7 @@
       <fu-icon-expand v-if="collapse"></fu-icon-expand>
       <fu-icon-fold v-else></fu-icon-fold>
     </span>
+    <a href="">查看文档</a>
   </div>
 </template>
 
@@ -28,5 +29,12 @@ const toggle = () => {
   display: flex;
   align-items: center;
   border-bottom: 1px solid #eee;
+  span {
+    display: flex;
+    align-items: center;
+  }
+  a {
+    text-decoration-line: none;
+  }
 }
 </style>

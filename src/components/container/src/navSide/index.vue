@@ -118,7 +118,16 @@ let data = [
     icon: 'menu',
     index: '/menu'
   },
-  {}
+  {
+    name: '测试',
+    icon: 'view',
+    index: "/test"
+  },
+  {
+    name: 'websocket',
+    icon: 'comment',
+    index: "/websocket"
+  }
 ]
 
 </script>
